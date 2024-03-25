@@ -1,0 +1,1 @@
+{"name":"Local: watermelon","url":"/home/ax3/Github/codeforces/watermelon.cpp","tests":[{"id":1711390904304,"input":"8","output":"YES"},{"id":1711390951371,"input":"2","output":"NO"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/ax3/Github/codeforces/watermelon.cpp","group":"local","local":true}
