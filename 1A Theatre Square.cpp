@@ -3,9 +3,12 @@
 using namespace std;
 
 int main(){
-    long double n, m, a;
+    unsigned long long n, m, a, t;
     cin >> n >> m >> a;
 
-    cout << (((n+a-1)/a)*((m+a-1)/a)) << endl;
+    t = ceil((double)n/a)*ceil((double)m/a);
+    cout << t;
+     
     return 0;
+
 }
