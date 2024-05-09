@@ -1,0 +1,1 @@
+{"name":"Local: 282A Bit++","url":"/home/ax3/Github/codeforces/282A Bit++.cpp","tests":[{"id":1715217543520,"input":"1\n++X\n","output":"1"},{"id":1715218545443,"input":"2\nX++\n--X\n","output":"0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/ax3/Github/codeforces/282A Bit++.cpp","group":"local","local":true}
