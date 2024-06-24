@@ -1,0 +1,1 @@
+{"name":"Local: 50A Domino Piling","url":"/home/ax3/Github/codeforces/50A Domino Piling.cpp","tests":[{"id":1719272957179,"input":"2 4","output":"4"},{"id":1719272965509,"input":"3 3","output":"4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/ax3/Github/codeforces/50A Domino Piling.cpp","group":"local","local":true}
