@@ -1,0 +1,1 @@
+{"name":"Local: 1992B","url":"/home/neutr0n/Github/codeforces/1992B.cpp","tests":[{"id":1721936272106,"input":"4\n5 3\n3 1 1\n5 2\n3 2\n11 4\n2 3 1 5\n16 6\n1 6 1 1 1 6","output":"2\n3\n9\n15"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/neutr0n/Github/codeforces/1992B.cpp","group":"local","local":true}
