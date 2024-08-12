@@ -22,27 +22,23 @@ mt19937 rnd(chrono::steady_clock::now().time_since_epoch().count());
 void solve() {
     int n, s, m; cin >> n >> s >> m;
 
-    vector<int> C;
+    vector<pair<int, int>> v(n);
     for (int i = 0; i < n; i++) {
-        int a, b; cin >> a >> b;
-        C.push_back(a);
-        C.push_back(b);
+        int l, r; cin >> l >> r;
+        v[i] = {l, r};
     }
 
-    srt(C);
-    int size = sz(C)-1;
-
-    
-    for (int i = 1; i < (double)ceil((double)size/2); i += 2) {
-        if ((abs(C[i+1])-abs(C[i]) >= s)) {
-            cout << "YES" << '\n';
-            break;
-        } else if ((C[0] >= s) || (m - C[size] >= s)) {
-            cout << "YES" << '\n';
-            break;
-        } else cout << "NO" << '\n';
+    int mx = v[0].first;
+    for (int i = 1; i < n; i++) {
+        mx = max(mx, v[i].first - v[i-1].second);
     }
-    
+
+    mx = max(mx, m - v[n-1].second);
+    if (mx >= s)
+        puts("YES");
+    else 
+        puts("NO");
+
 }
 
 int main() {
