@@ -4,10 +4,9 @@ using namespace std;
 void dbg_out() { cerr << endl; }
 template<typename Head, typename... Tail>
 void dbg_out(Head H, Tail... T) { cerr << ' ' << H; dbg_out(T...); }
-#define dbg(...) cerr << "(" << __VA_ARGS__ << "):", dbg_out(__VA_ARGS_)
+#define dbg(...) cerr << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS_)
 
 #define ll long long 
-#define lli long long int  
 #define all(x) (x).begin(),(x).end()
 #define srt(x) sort(x.begin(),x.end())
 #define mxe(x) *max_element(x.begin(),x.end())
@@ -21,35 +20,13 @@ const int MXN = 1e5 + 5, INF = 1e9 + 5;
 mt19937 rnd(chrono::steady_clock::now().time_since_epoch().count());
 
 void solve() {
-    int n, q; cin >> n >> q;
-    string a, b; cin >> a >> b;
-
-    vector<vector<int>> prefA(n+1, vector<int>(26));
-    vector<vector<int>> prefB(n+1, vector<int>(26));
-
-    for (int i = 0; i < n; i++) {
-        prefA[i+1] = prefA[i];
-        int char_id = a[i] - 'a';
-        prefA[i+1][char_id]++;
-    }
-    for (int i = 0; i < n; i++) {
-        prefB[i+1] = prefB[i];
-        int char_id = b[i] - 'a';
-        prefB[i+1][char_id]++;
-    }
-
-    while (q--) {
-        int l, r; cin >> l >> r;
-        int sum = 0;
-        --l;
-
-        for (int i = 0; i < 26; i++) {
-            int a = abs(prefA[l][i] - prefA[r][i]);
-            int b = abs(prefB[l][i] - prefB[r][i]);
-            sum += abs(a - b);
-        }
-        cout << sum/2 << '\n';
-    }
+    string s; cin >> s;
+    int sum;
+    int a = s[0]-'0';
+    int b = s[1]-'0';
+    
+    sum = a + b;
+    cout << sum << '\n';
 }
 
 int main() {
